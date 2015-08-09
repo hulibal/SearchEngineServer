@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<configuration>
+	<!-- 爬虫启动的周期 -->
+	<date>
+		<day_of_month>18</day_of_month>
+		<day_of_week></day_of_week>
+		<hour_of_day>9</hour_of_day>
+		<minute>30</minute>
+		<second>0</second>
+	</date>
+	
+	<!-- 爬虫启动的配置文件 -->
+	<crawler_order>F:/java project/IDE FOR J2EE/SearchEngineServer/files/crawler/job</crawler_order>
+
+	<!-- 爬虫下载文件的保存路径 -->
+	<download>F:/java project/IDE FOR J2EE/SearchEngineServer/files/crawler/downloaded_files</download>
+	
+	<!-- 页面分析源文件文件夹的路径 -->
+	<htmlpage>F:/java project/IDE FOR J2EE/SearchEngineServer/files/crawler/downloaded_files</htmlpage>
+	
+	<!-- 页面分析结果所在的文件夹 -->
+	<parser>F:/java project/IDE FOR J2EE/SearchEngineServer/files/textExtract/</parser>
+	
+	<!-- 待索引文件的文件夹的位置 -->
+	<source>F:/java project/IDE FOR J2EE/SearchEngineServer/files/textExtract</source>
+	
+	<!-- 待索引文件读取的行数 -->
+	<rows_to_read>1</rows_to_read>
+	
+	<!-- 更新的待索引文件的文件夹位置 -->
+	<updatesource>F:/java project/IDE FOR J2EE/SearchEngineServer/files/updatesource</updatesource>
+
+	<!-- 索引文件夹的位置 -->
+	<index>F:/java project/IDE FOR J2EE/SearchEngineServer/files/index</index>
+	
+	<!-- 索引性能优化参数 -->
+	<optimize>
+		<!-- 控制多个segment合并的频率，值较大时建立索引速度较快，默认是10，可以在建立索引时设置为100。 -->
+		<mergeFactor>20</mergeFactor>
+		<!-- 控制写入一个新的segment前内存中保存的document的数目，设置较大的数目可以加快建索引速度，默认为10。 -->
+		<maxBufferedDocs>10</maxBufferedDocs>
+		<!-- 控制RAM缓存的大小，如果需要索引大量文件，则需增加RAM缓存，同时需要调整Java虚拟机的max heap参数(例如： -Xmx512m or -Xmx1g) -->
+		<RAMBufferSizeMB>256</RAMBufferSizeMB>
+	</optimize>
+	
+	<!-- 是否在建立索引的过程中显示索引建立的进度细节 -->
+	<showProcess>true</showProcess>
+
+	<!-- 搜索结果页面的url -->
+	<sresulturl>http://localhost:8081/SearchEngineServer/SearchQuery.jsp</sresulturl>
+	
+	<!-- 每一搜索结果条目的长度 -->
+	<length>150</length>
+	
+	<!-- 每页显示的条数 -->
+	<MaxRows>5</MaxRows>
+</configuration>
